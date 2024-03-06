@@ -1,167 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SoulAnchor</title>
-    <style>
-        /* Reset some default browser styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+{% extends 'main/base.html' %}
 
-body {
-    font-family: Arial, sans-serif;
-}
+{% block title %}
+Home
+{% endblock %}
 
-header {
-    background-color: #007bff;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
+{% block content %}
+<style>
+</style>
+<section id="hero-section">
+    <h2>Welcome to SoulAnchor</h2>
+    <p>We are here to provide you with a safe space to seek support, guidance and resources for your mental well-being
+    </p>
+    <!--button id="getStartedBtn">Get Started</button-->
+</section>
+<section id="info">
 
-nav {
-            background-color: #f4f4f4;
-            padding: 10px;
-        }
-
-nav ul {
-            list-style: none;
-            text-align: center;
-        }
-
-nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
-nav ul li a {
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-        }
-
-main {
-    padding: 20px;
-}
-
-#hero-section {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-#hero-section h2 {
-    font-size: 2em;
-}
-
-#hero-section p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-}
-
-#getStartedBtn {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.1em;
-    cursor: pointer;
-}
-
-#getStartedBtn:hover {
-    background-color: #0056b3;
-}
-
-.info {
-    margin-bottom: 50px;
-    margin-left: 50px;
-    margin-right: 150px;
-}
-
-.chatbotBtn {
-            background-color: #007bff;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.1em;
-            cursor: pointer;
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-        }
-
- .chatbotBtn:hover {
-            background-color: #0056b3;
-        }
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-    </style>
-</head>
-<body>
-    <header>
-        <h1>SoulAnchor</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="article.html">Articles</a></li>
-            <!--li><a href="#">Forum</a></li>
-            <li><a href="#">About Us</a></li-->
-            <li><a href="#">Professional Help</a></li>
-            <li><button class="chatbotBtn">Chat with us</button></li>
-        </ul>
+    <!-- Placeholder for articles -->
+    <div class="info">
         
-    </nav>
-    <main>
-        <section id="hero-section">
-            <h2>Welcome to SoulAnchor</h2>
-            <p>We are here to provide you with a safe space to seek support, guidance and resources for your mental well-being
-            </p>
-            <!--button id="getStartedBtn">Get Started</button-->
-        </section>
-        <section id="info">
-
-            <!-- Placeholder for articles -->
-            <div class="info">
-                
-                <p align="justify">We understand the challenges that come with addressing mental health concerns, and we're here to support you every step of the way.</p><br>
-                <p align="justify">Are you feeling overwhelmed by stress, anxiety, or depression? Here, you'll find a wealth of resources and support tailored to your unique needs. Our mission is to provide a safe and non-judgmental space where you can explore your mental health journey with confidence.</p><br>
-                    
-                <p align="justify"> Seeking help is a courageous step towards reclaiming your well-being. Through therapy, self-care strategies, and educational materials, we empower you to take control of your mental health and live a fulfilling life.
-We believe in the power of self-compassion and resilience. We're here to remind you that it's okay to ask for help and to embrace your journey towards healing with courage and hope. No matter where you are on your path, know that you are not alone.</p><br>
-                    
-<p align="justify"> Take the first step towards mental wellness today. Explore our resources, connect with our team, and embark on a journey towards a brighter tomorrow. Together, let's break the stigma surrounding mental health and create a community of support and understanding for all. Your journey to healing starts here.</p><br>
-                <a href="#">Read More</a>
-            </div>
-            <!-- More articles can be added similarly -->
-        </section>
-        
-    
-        
-    </main>
-    <!--footer>
-        <p>&copy; SoulAnchor</p>
-    </footer-->
-    <script> 
-      // You can add JavaScript functionality here, such as handling button clicks, fetching data from a server, etc.
-document.getElementById('getStartedBtn').addEventListener('click', function() {
-    // Example: Redirect to a registration page
-    window.location.href = 'register.html';
-});
-
-    </script>
-</body>
-</html>
+        <p align="justify">We understand the challenges that come with addressing mental health concerns, and we're here to support you every step of the way.</p><br>
+        <p align="justify">Are you feeling overwhelmed by stress, anxiety, or depression? Here, you'll find a wealth of resources and support tailored to your unique needs. Our mission is to provide a safe and non-judgmental space where you can explore your mental health journey with confidence.</p><br>
+            
+        <p align="justify"> Seeking help is a courageous step towards reclaiming your well-being. Through therapy, self-care strategies, and educational materials, we empower you to take control of your mental health and live a fulfilling life.
+                            We believe in the power of self-compassion and resilience. We're here to remind you that it's okay to ask for help and to embrace your journey towards healing with courage and hope. No matter where you are on your path, know that you are not alone.</p><br>
+            
+        <p align="justify"> Take the first step towards mental wellness today. Explore our resources, connect with our team, and embark on a journey towards a brighter tomorrow. Together, let's break the stigma surrounding mental health and create a community of support and understanding for all. Your journey to healing starts here.</p><br>
+        <a href="#">Read More</a>
+    </div>
+    <!-- More articles can be added similarly -->
+</section>
+{% endblock %}

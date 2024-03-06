@@ -10,3 +10,8 @@ from django.utils import timezone
 def home(response):
 
     return render(response, "main/home.html", {})
+
+@login_required
+def article(response):
+
+    return render(response, "main/article.html", {})

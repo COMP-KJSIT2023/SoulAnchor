@@ -4,113 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Article</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    
+{% extends 'main/base.html' %}
 
-        body {
-            font-family: Arial, sans-serif;
-        }
+{% block title %}
+Article
+{% endblock %}
 
-        header {
-            background-color: #007bff;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-
-        nav {
-            background-color: #f4f4f4;
-            padding: 10px;
-        }
-
-        nav ul {
-            list-style: none;
-            text-align: center;
-        }
-
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-        }
-
-        main {
-            padding: 20px;
-        }
-
-        .chatbotBtn {
-            background-color: #007bff;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.1em;
-            cursor: pointer;
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-        }
-
-        .chatbotBtn:hover {
-            background-color: #0056b3;
-        }
-
-        .container {
-            width: 90%;
-            margin: 20px auto;
-            background-color: #acccee;
-            text-align: center;
-        }
-
-        .myDIV {
-            display: none;
-            width: 90%;
-            margin: 0 auto;
-            text-align: justify;
-            padding-left: 20px;
-            background-color: #acccee;
-            color: #000;
-            
-        }
-
-        .mystyle {
-            display: block;
-        }
-
-        .container button {
-            background: none;
-            border: none;
-            padding: 0;
-            font: inherit;
-            cursor: pointer;
-            outline: inherit;
-            margin: 0;
-            color: #00060c;
-            font-weight: bold;
-        }
-    </style>
-</head>
-<body>
-<header>
-    <h1>SoulAnchor</h1>
-</header>
-<nav>
-    <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="article.html">Articles</a></li>
-        <li><a href="#">Professional Help</a></li>
-        <li><button class="chatbotBtn">Chat with us</button></li>
-    </ul>
-</nav>
+{% block content %}
 <div class="container">
     <button onclick="toggleContent('myDIV1')">Anxiety</button>
 </div>
@@ -148,5 +49,4 @@
         element.classList.toggle("mystyle");
     }
 </script>
-</body>
-</html>
+{% endblock %}
