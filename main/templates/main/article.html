@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #f4f4f4;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .chatbotBtn {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        .chatbotBtn:hover {
+            background-color: #0056b3;
+        }
+
+        .container {
+            width: 90%;
+            margin: 20px auto;
+            background-color: #acccee;
+            text-align: center;
+        }
+
+        .myDIV {
+            display: none;
+            width: 90%;
+            margin: 0 auto;
+            text-align: justify;
+            padding-left: 20px;
+            background-color: #acccee;
+            color: #000;
+            
+        }
+
+        .mystyle {
+            display: block;
+        }
+
+        .container button {
+            background: none;
+            border: none;
+            padding: 0;
+            font: inherit;
+            cursor: pointer;
+            outline: inherit;
+            margin: 0;
+            color: #00060c;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>SoulAnchor</h1>
+</header>
+<nav>
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="article.html">Articles</a></li>
+        <li><a href="#">Professional Help</a></li>
+        <li><button class="chatbotBtn">Chat with us</button></li>
+    </ul>
+</nav>
+<div class="container">
+    <button onclick="toggleContent('myDIV1')">Anxiety</button>
+</div>
+<div id="myDIV1" class="myDIV mystyle">
+    <p>Generalized anxiety disorder (GAD) is a specific type of anxiety disorder. Most people worry at times about their health, job, money, or family, but people with GAD experience anxiety about these things and more, in a way that is persistent, excessive, and intrusive.<br>
+    Often, people with GAD struggle to relax and have trouble concentrating on tasks. They may experience physical symptoms including restlessness, sweating, difficulty swallowing, and using the restroom a lot.<br>
+    According to mental health experts, nearly 3% of all U.S. adults have experienced GAD in the last year and it is estimated that up to 9% experience GAD at some point in their lives. Considering that anxiety is a common mental health condition, the United States Preventative Services Task Force recommends that all adults under the age of 65 should be routinely screened for anxiety.<br>
+    While symptoms of anxiety can be debilitating, with proper treatment—including medication and psychotherapy—people can learn to manage their symptoms and live a more productive life.</p>
+</div>
+<div class="container">
+    <button onclick="toggleContent('myDIV2')">Depression</button>
+</div>
+<div id="myDIV2" class="myDIV">
+    <p>Clinically significant depression is marked by persistent sadness, a depressed mood, diminished interest in previously enjoyable activities, and other symptoms that interfere with the ability to function in daily life.<br>
+    The condition often arises from a complex combination of factors that can include genetics, family history, trauma, stress, and illness. It is one of the most common mental disorders as nearly 1 in 5 adults in the United States have been diagnosed with depression in their lifetime.<br>
+    Fortunately, effective treatments are available including medications, psychotherapy, or a combination of the two. Self-help strategies can also help people better cope with their symptoms and begin to feel better.</p>
+</div>
+<div class="container">
+    <button onclick="toggleContent('myDIV3')">Attention-Deficit/Hyperactivity Disorder (ADHD)</button>
+</div>
+<div id="myDIV3" class="myDIV">
+    <p>Attention-deficit/hyperactivity disorder (ADHD) is a common neurotype that is usually first diagnosed during childhood though diagnoses in adults have surged in the past few years. More than six million children in the U.S. between the ages of 3 and 17 have been diagnosed with ADHD.1 It is characterized by patterns of inattention, hyperactivity, and impulsivity that make it difficult for people to function in a way that's deemed "standard" or neurotypical.<br>
+    ADHD is lifelong. While traits do change with time, they can still interfere with an adult's functioning. Relationships, health, work, and finances are just a few areas that may be impacted. There are management options, including medications and therapies, as well as helpful strategies that can help you live well with ADHD.</p>
+</div>
+<div class="container">
+    <button onclick="toggleContent('myDIV4')">Eating Disorder</button>
+</div>
+<div id="myDIV4" class="myDIV">
+    <p>An eating disorder is a mental health condition in which the person affected experiences significant disruptions in their eating behaviors as well as in their related thoughts and emotions. People who struggle with eating disorders often become preoccupied with food and their body weight.<br> 
+    Additionally, eating disorders often occur together with other mental health issues like depression, anxiety, panic disorders, and obsessive compulsive disorders. Without treatment, eating disorders can cause a number of health-related problems including cardiovascular issues, gastrointestinal issues, and malnutrition. But with proper treatment, people affected by eating disorders can resume suitable eating habits and can improve their mental health.</p>
+</div>
+<script>
+    function toggleContent(id) {
+        var element = document.getElementById(id);
+        element.classList.toggle("mystyle");
+    }
+</script>
+</body>
+</html>
