@@ -15,3 +15,15 @@ def home(response):
 def article(response):
 
     return render(response, "main/article.html", {})
+
+
+@login_required
+def form(response):
+
+    return render(response, "main/form.html", {})
+
+
+@login_required
+def phelp(response):
+
+    return render(response, "main/phelp.html", {})
