@@ -12,6 +12,87 @@ Article
 {% endblock %}
 
 {% block content %}
+    <style>
+        .post {
+    display: flex;
+    width: 90%;
+    margin: 20px auto;
+    background-color:white;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+
+.post-content {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.post ,
+.post-content {
+    flex-grow: 1;
+    flex-shrink: 0;
+    margin-right: 2.4rem;
+}
+
+.post-title-link{
+    text-decoration: none;
+}
+
+.post ,
+.post-content {
+    margin-bottom: .8rem;
+    color: #045346;
+}
+
+.post ,
+.post-content :hover {
+    color: #d49f11;
+}
+
+.post ,
+.post-content  ,
+.post-title {
+    margin-bottom: .8rem;
+}
+
+.post ,
+.post-content ,
+.post-title ,
+.post-title-link {
+    color: #232426;
+}
+
+.post ,
+.post-content ,
+.post-title ,
+.post-title-link:hover {
+    color: #d49f11;
+}
+
+.post ,
+.post-content ,
+.post-excerpt {
+    margin-bottom: .4rem;
+}
+
+.post ,
+.post-content ,
+.post-contact {
+    color: #232426;
+}
+.image-wrapper {
+    width: 200px; 
+    margin-left: auto; 
+    border-radius: 5px;
+    margin-top: 5px;
+}
+    </style>
 <div class="container">
     <button onclick="toggleContent('myDIV1')">Anxiety</button>
 </div>
@@ -20,6 +101,78 @@ Article
     Often, people with GAD struggle to relax and have trouble concentrating on tasks. They may experience physical symptoms including restlessness, sweating, difficulty swallowing, and using the restroom a lot.<br>
     According to mental health experts, nearly 3% of all U.S. adults have experienced GAD in the last year and it is estimated that up to 9% experience GAD at some point in their lives. Considering that anxiety is a common mental health condition, the United States Preventative Services Task Force recommends that all adults under the age of 65 should be routinely screened for anxiety.<br>
     While symptoms of anxiety can be debilitating, with proper treatment—including medication and psychotherapy—people can learn to manage their symptoms and live a more productive life.</p>
+    <h3><br>
+        Symptoms
+    </h3>
+    <ul>
+    <li>Feeling nervous, restless or tense</li>
+    <li>Having a sense of impending danger, panic or doom</li>
+    <li>Having an increased heart rate</li>
+    <li>Breathing rapidly (hyperventilation)</li>
+    <li>Sweating</li>
+    <li>Trembling</li>
+    <li>Feeling weak or tired</li>
+    <li>Trouble concentrating or thinking about anything other than the present worry</li>
+    <li>Having trouble sleeping</li>
+    <li>Experiencing gastrointestinal (GI) problems</li>
+    <li>Having difficulty controlling worry</li>
+    <li>Having the urge to avoid things that trigger anxiety</li><br>
+    </ul>
+   <h3>Resources</h3><br>
+    <article class="post">
+        <div class="post-content">
+            <h3 class="post-title">
+                <a class="post-title-link" href="https://www.verywellmind.com/what-are-the-different-types-of-anxiety-5225364">
+                    What Are the Different Types of Anxiety?
+                </a>
+            </h3>
+            <p class="post-excerpt">
+                Causes and solutions
+            </p>
+            <p class="post-contact">
+               10 min
+            </p>
+        </div>
+        <a class="image-wrapper">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8MTiYPk64xYB6xZLkKHzgJJywjeZKEOTe8g&usqp=CAU" alt="anxiety" width="100" height="100">
+        </a>
+    </article>
+    <article class="post">
+        <div class="post-content">
+            <h3 class="post-title">
+                <a class="post-title-link" href="https://newsinhealth.nih.gov/2016/03/understanding-anxiety-disorders">
+                    Understanding Anxiety Disorders
+                </a>
+            </h3>
+            <p class="post-excerpt">
+                Calming panic, fear and worries
+            </p>
+            <p class="post-contact">
+               12 min
+            </p>
+        </div>
+        <a class="image-wrapper">
+            <img src="https://newsinhealth.nih.gov/sites/nihNIH/files/styles/featured_media_breakpoint-large/public/2016/March/illustration-worried-man-apart-circle-friends_0.jpg?itok=BEkIrrCZ" alt="anxiety" width="100" height="100">
+        </a>
+    </article>
+    <article class="post">
+        <div class="post-content">
+            <h3 class="post-title">
+                <a class="post-title-link" href="https://www.medicalnewstoday.com/articles/323454">
+                    What to know about anxiety
+                </a>
+            </h3>
+            <p class="post-excerpt">
+                Symptoms, causes, and treatments
+            </p>
+            <p class="post-contact">
+               15 min
+            </p>
+        </div>
+        <a class="image-wrapper">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR29O6or1RaHzlROX8y2C81NqT8-UxcaoFtUQ&usqp=CAU" alt="anxiety" width="100" height="100">
+        </a>
+    </article>
 </div>
 <div class="container">
     <button onclick="toggleContent('myDIV2')">Depression</button>
@@ -28,6 +181,78 @@ Article
     <p>Clinically significant depression is marked by persistent sadness, a depressed mood, diminished interest in previously enjoyable activities, and other symptoms that interfere with the ability to function in daily life.<br>
     The condition often arises from a complex combination of factors that can include genetics, family history, trauma, stress, and illness. It is one of the most common mental disorders as nearly 1 in 5 adults in the United States have been diagnosed with depression in their lifetime.<br>
     Fortunately, effective treatments are available including medications, psychotherapy, or a combination of the two. Self-help strategies can also help people better cope with their symptoms and begin to feel better.</p>
+    <h3><br>
+        Symptoms
+    </h3>
+    <ul>
+    <li>Feelings of sadness, tearfulness, emptiness or hopelessness</li>
+    <li>Angry outbursts, irritability or frustration, even over small matters</li>
+    <li>Loss of interest or pleasure in most or all normal activities, such as sex, hobbies or sports</li>
+    <li>Sleep disturbances, including insomnia or sleeping too much</li>
+    <li>Tiredness and lack of energy, so even small tasks take extra effort</li>
+    <li>Reduced appetite and weight loss or increased cravings for food and weight gain</li>
+    <li>Anxiety, agitation or restlessness</li>
+    <li>Slowed thinking, speaking or body movements</li>
+    <li>Feelings of worthlessness or guilt, fixating on past failures or self-blame</li>
+    <li>Trouble thinking, concentrating, making decisions and remembering things</li>
+    <li>Frequent or recurrent thoughts of death, suicidal thoughts, suicide attempts or suicide</li>
+    <li>Unexplained physical problems, such as back pain or headaches</li><br>
+    </ul>
+    <h3>Resources</h3><br>
+    <article class="post">
+        <div class="post-content">
+            <h3 class="post-title">
+                <a class="post-title-link" href="https://www.medicalnewstoday.com/articles/8933">
+                    What is depression and what can I do about it?
+                </a>
+            </h3>
+            <p class="post-excerpt">
+                Causes, types, treatement and more
+            </p>
+            <p class="post-contact">
+               20 min
+            </p>
+        </div>
+        <a class="image-wrapper">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToA-rV7uzA847av624lyOzct8thTZoxBq23A&usqp=CAU" alt="depression" width="100" height="100">
+        </a>
+    </article>
+    <article class="post">
+        <div class="post-content">
+            <h3 class="post-title">
+                <a class="post-title-link" href="https://www.nhs.uk/mental-health/conditions/depression-in-adults/causes/">
+                    Causes - Depression in adults
+                </a>
+            </h3>
+            <p class="post-excerpt">
+                Causes
+            </p>
+            <p class="post-contact">
+               8 min
+            </p>
+        </div>
+        <a class="image-wrapper">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwn7WzF6WQSVa3VFN1C8tviOyt5b1KzT-SEA&usqp=CAU" alt="depression" width="100" height="100">
+        </a>
+    </article>
+    <article class="post">
+        <div class="post-content">
+            <h3 class="post-title">
+                <a class="post-title-link" href="https://www.medicalnewstoday.com/articles/stages-of-depression">
+                    What to know about the stages of Depression
+                </a>
+            </h3>
+            <p class="post-excerpt">
+                Diffrent stages, signs, diagnosis and treatment
+            </p>
+            <p class="post-contact">
+              10 min
+            </p>
+        </div>
+        <a class="image-wrapper">
+            <img src="data:image/png;base64,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" alt="depression" width="100" height="100">
+        </a>
+    </article>
 </div>
 <div class="container">
     <button onclick="toggleContent('myDIV3')">Attention-Deficit/Hyperactivity Disorder (ADHD)</button>
@@ -35,6 +260,92 @@ Article
 <div id="myDIV3" class="myDIV">
     <p>Attention-deficit/hyperactivity disorder (ADHD) is a common neurotype that is usually first diagnosed during childhood though diagnoses in adults have surged in the past few years. More than six million children in the U.S. between the ages of 3 and 17 have been diagnosed with ADHD.1 It is characterized by patterns of inattention, hyperactivity, and impulsivity that make it difficult for people to function in a way that's deemed "standard" or neurotypical.<br>
     ADHD is lifelong. While traits do change with time, they can still interfere with an adult's functioning. Relationships, health, work, and finances are just a few areas that may be impacted. There are management options, including medications and therapies, as well as helpful strategies that can help you live well with ADHD.</p>
+    <h3><br>
+        Symptoms
+    </h3>
+    The symptoms of attention deficit hyperactivity disorder (ADHD) can be categorised into 2 types of behavioural problems:
+<ul>
+<li>Inattentiveness (difficulty concentrating and focusing)</li>
+<li>Hyperactivity and impulsiveness</li></ul><br>
+<b>1] Inattentiveness (difficulty concentrating and focusing)</b><br>
+<ul>
+    <li>Having a short attention span and being easily distracted</li>
+    <li>Making careless mistakes – for example, in schoolwork</li>
+    <li>Appearing forgetful or losing things</li>
+    <li>being unable to stick to tasks that are tedious or time-consuming</li>
+    <li>Appearing to be unable to listen to or carry out instructions</li>
+    <li>Constantly changing activity or task</li>
+    <li>Having difficulty organising tasks</li>
+    <br>
+    </ul>
+<b>2] Hyperactivity and impulsiveness</b><br>
+    <ul>
+    <li>being unable to sit still, especially in calm or quiet surroundings</li>
+    <li>Constantly fidgeting</li>
+    <li>Being unable to concentrate on tasks</li>
+    <li>Excessive physical movement</li>
+    <li>Excessive talking</li>
+    <li>Being unable to wait their turn</li>
+    <li>Acting without thinking</li>
+    <li>Interrupting conversations</li>
+    <li>Little or no sense of danger</li>
+    <br>
+    </ul>
+    <h3>Resources</h3><br>
+    <article class="post">
+        <div class="post-content">
+            <h3 class="post-title">
+                <a class="post-title-link" href="https://www.helpguide.org/articles/add-adhd/adhd-attention-deficit-disorder-in-adults.htm">
+                    ADHD in Adults: Symptoms, Effects, and Self-Help
+                </a>
+            </h3>
+            <p class="post-excerpt">
+                Facts, symptoms and effects
+            </p>
+            <p class="post-contact">
+               18 min
+            </p>
+        </div>
+        <a class="image-wrapper">
+            <img src="https://www.helpguide.org/wp-content/uploads/2018/11/ADHD-in-Adults-1200x800.jpg" alt="adhd" width="100" height="100">
+        </a>
+    </article>
+    <article class="post">
+        <div class="post-content">
+            <h3 class="post-title">
+                <a class="post-title-link" href="https://www.verywellmind.com/what-causes-adhd-20465">
+                    Causes and Risk Factors of Attention-Deficit Hyperactivity Disorder (ADHD)
+                </a>
+            </h3>
+            <p class="post-excerpt">
+                Causes
+            </p>
+            <p class="post-contact">
+               10 min
+            </p>
+        </div>
+        <a class="image-wrapper">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3EtKyhgXMbCfvoyP_1cqHjMX3p4zSQNDLhA&usqp=CAU" alt="adhd" width="100" height="100">
+        </a>
+    </article>
+    <article class="post">
+        <div class="post-content">
+            <h3 class="post-title">
+                <a class="post-title-link" href="https://www.additudemag.com/symptoms-of-add-hyperarousal-rejection-sensitivity/">
+                    3 Defining Features of ADHD That Everyone Overlooks
+                </a>
+            </h3>
+            <p class="post-excerpt">
+                Management of true ADHD defining symptoms
+            </p>
+            <p class="post-contact">
+              5 min
+            </p>
+        </div>
+        <a class="image-wrapper">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt4elncF-4ReIDBXl3cOgJQNS8-Qnp8AdgfEI6diHHhm9WAUAMhir6OVuu9ZJmgQCoyMI&usqp=CAU" alt="adhd" width="100" height="100">
+        </a>
+    </article>
 </div>
 <div class="container">
     <button onclick="toggleContent('myDIV4')">Eating Disorder</button>
@@ -42,6 +353,110 @@ Article
 <div id="myDIV4" class="myDIV">
     <p>An eating disorder is a mental health condition in which the person affected experiences significant disruptions in their eating behaviors as well as in their related thoughts and emotions. People who struggle with eating disorders often become preoccupied with food and their body weight.<br> 
     Additionally, eating disorders often occur together with other mental health issues like depression, anxiety, panic disorders, and obsessive compulsive disorders. Without treatment, eating disorders can cause a number of health-related problems including cardiovascular issues, gastrointestinal issues, and malnutrition. But with proper treatment, people affected by eating disorders can resume suitable eating habits and can improve their mental health.</p>
+    <h3><br>
+        Symptoms
+    </h3>
+    <b>1] Anorexia Nervosa</b><br>
+    <ul>
+        <li>Significant weight loss</li>
+        <li>Fear of gaining weight or becoming fat</li>
+        <li>Distorted body image</li>
+        <li>Restrictive eating habits</li>
+        <li>Excessive exercise</li>
+        <li>Denial of low body weight</li>
+        <br>
+        </ul>
+    <b>2] Bulimia Nervosa</b><br>
+        <ul>
+            <li>Binge eating episodes</li>
+            <li>Lack of control during bingeing</li>
+            <li>Compensatory behaviors (vomiting, laxative misuse, etc.)</li>
+            <li>Frequent bathroom trips after meals</li>
+            <li>Weight fluctuations</li>
+            <br>
+            </ul>
+
+            <b>3] Binge Eating Disorder (BED)</b><br>
+        <ul>
+            <li>Frequent episodes of overeating</li>
+            <li>Lack of control during binge eating</li>
+            <li>Eating when not hungry</li>
+            <li>Feelings of guilt or shame after bingeing</li>
+            <li>No compensatory behaviors</li>
+            <br>
+            </ul>
+
+            <b>4] Other Specified Feeding or Eating Disorder (OSFED)</b><br>
+        <ul>
+            <li>Symptoms of an eating disorder but not meeting specific criteria</li>
+            <li>Examples include atypical anorexia nervosa or bulimia nervosa</li>
+            <br>
+            </ul>
+
+            <b>5] Avoidant/Restrictive Food Intake Disorder (ARFID)</b><br>
+        <ul>
+            <li>Avoidance or restriction of food intake</li>
+            <li>Lack of interest in eating</li>
+            <li>Sensory aversions to food</li>
+            <li>Fear of choking or vomiting</li>
+            <li>Concerns about consequences of eating</li>
+            <br>
+            </ul>
+    <h3>Resources</h3><br>
+    <article class="post">
+        <div class="post-content">
+            <h3 class="post-title">
+                <a class="post-title-link" href="https://www.nimh.nih.gov/health/publications/eating-disorders">
+                    Eating Disorders: About More Than Food
+                </a>
+            </h3>
+            <p class="post-excerpt">
+                Types, risks, symptoms and treatment
+            </p>
+            <p class="post-contact">
+               7 min
+            </p>
+        </div>
+        <a class="image-wrapper">
+            <img src="data:image/jpeg;base64,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" alt="eating disorder" width="100" height="100">
+        </a>
+    </article>
+    <article class="post">
+        <div class="post-content">
+            <h3 class="post-title">
+                <a class="post-title-link" href="https://www.helpguide.org/articles/eating-disorders/eating-disorder-treatment-and-recovery.htm">
+                    Eating Disorder Treatment and Recovery
+                </a>
+            </h3>
+            <p class="post-excerpt">
+                Recovery ,treatement and self-help strategies
+            </p>
+            <p class="post-contact">
+               15 min
+            </p>
+        </div>
+        <a class="image-wrapper">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS07yLWU1FbkJgEQVvbABy1X1RRSQDPrKfulg&usqp=CAU" alt="eating disorder" width="100" height="100">
+        </a>
+    </article>
+    <article class="post">
+        <div class="post-content">
+            <h3 class="post-title">
+                <a class="post-title-link" href="https://jamanetwork.com/journals/jama/fullarticle/2789987">
+                    Prevention and Early Identification of Eating Disorders
+                </a>
+            </h3>
+            <p class="post-excerpt">
+                Prevention 
+            </p>
+            <p class="post-contact">
+              5 min
+            </p>
+        </div>
+        <a class="image-wrapper">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI7BzCV00yZcGiqqsQGxfx2nJT0LUmSfGT5A&usqp=CAU" alt="eating disorder" width="100" height="100">
+        </a>
+    </article>
 </div>
 <script>
     function toggleContent(id) {
