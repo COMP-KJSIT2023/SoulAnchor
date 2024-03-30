@@ -28,6 +28,7 @@ def login(response):
                 auth_login(response, user)
                 survey_filled = Survey_filled.objects.get(user=user)
                 survey_filled.status = False
+                survey_filled.save()
                 return redirect('/')
             else:
                 return render(response, 'registration/login.html', {'form': form})

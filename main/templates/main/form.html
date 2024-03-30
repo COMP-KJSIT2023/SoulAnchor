@@ -3,9 +3,193 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hi</title>
+    <title>Form</title>
 </head>
 <body>
-    <h2>Question 1</h2>
+<style>
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 20px;
+      }
+
+      .card {
+        max-width: 400px;
+        background-color: rgb(7 16 45);
+        background: linear-gradient(to top right, rgb(7 16 45), rgb(58 60 84));
+        background: -webkit-linear-gradient(to top right, rgb(7 16 45), rgb(58 60 84)); 
+        display: grid;
+        padding: 20px;
+        border-radius: 20px;
+        border: 1px solid rgb(84 90 106);
+      }
+
+      .card:hover {
+        color: #fff;
+        background-color: #1A1A1A;
+        box-shadow: rgba(0, 0, 0, 0.5) 0 10px 20px;
+        transform: translateY(-3px);
+      }
+      
+      .small-text, .title,.desc {
+        font-weight: 600;
+      }
+      
+      .title,.desc {
+        margin: 8px 0;
+      }
+      
+      .small-text {
+        color: #488aec;
+        font-size: 14px;
+      }
+      
+      .title {
+        color: #fff;
+        font-size: 26px;
+        line-height: 26px;
+      }
+      
+      .desc {
+        color: rgb(151 153 167);
+        font-size: 13px;
+      }
+
+      .container {
+        margin-left: 350px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 600px;
+        background-color: #f1f1f1;
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+  s: 0px;
+  color: rgba(255, 255, 255, 0.7);
+  transition-timin.customCheckBoxHolder {
+  margin: 5px;
+  display: flex;
+}
+
+.customCheckBox {
+  width: fit-content;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  user-select: none;
+  padding: 2px 8px;
+  background-color: rgba(0, 0, 0, 0.16);
+  border-radiug-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 300ms;
+  transition-property: color, background-color, box-shadow;
+  display: flex;
+  height: 32px;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 1px 0px inset, rgba(255, 255, 255, 0.17) 0px 1px 1px 0px;
+  outline: none;
+  justify-content: center;
+  min-width: 55px;
+}
+
+.customCheckBox:hover {
+  background-color: #2c2c2c;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.23) 0px -4px 1px 0px inset, rgba(255, 255, 255, 0.17) 0px -1px 1px 0px, rgba(0, 0, 0, 0.17) 0px 2px 4px 1px;
+}
+
+.customCheckBox .inner {
+  font-size: 18px;
+  font-weight: 900;
+  pointer-events: none;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 300ms;
+  transition-property: transform;
+  transform: translateY(0px);
+}
+
+.customCheckBox:hover .inner {
+  transform: translateY(-2px);
+}
+
+.customCheckBoxWrapper:first-of-type .customCheckBox {
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  border-right: 0px;
+}
+
+.customCheckBoxWrapper:last-of-type .customCheckBox {
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  border-left: 0px;
+}
+
+.customCheckBoxInput {
+  display: none;
+}
+
+.customCheckBoxInput:checked + .customCheckBoxWrapper .customCheckBox {
+  background-color: #2d6737;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.23) 0px -4px 1px 0px inset, rgba(255, 255, 255, 0.17) 0px -1px 1px 0px, rgba(0, 0, 0, 0.17) 0px 2px 4px 1px;
+}
+
+.customCheckBoxInput:checked + .customCheckBoxWrapper .customCheckBox .inner {
+  transform: translateY(-2px);
+}
+
+.customCheckBoxInput:checked + .customCheckBoxWrapper .customCheckBox:hover {
+  background-color: #34723f;
+  box-shadow: rgba(0, 0, 0, 0.26) 0px -4px 1px 0px inset, rgba(255, 255, 255, 0.17) 0px -1px 1px 0px, rgba(0, 0, 0, 0.15) 0px 3px 6px 2px;
+}
+
+.customCheckBoxWrapper .customCheckBox:hover .inner {
+  transform: translateY(-2px);
+}
+
+button {
+    border: none;
+    outline: none;
+    margin: 20px;
+    background-color: #6c5ce7;
+    padding: 10px 20px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 5px;
+    transition: all ease 0.1s;
+    box-shadow: 0px 5px 0px 0px #a29bfe;
+  }
+  
+  button:active {
+    transform: translateY(5px);
+    box-shadow: 0px 0px 0px 0px #a29bfe;
+  }
+</style>
+<div class="container">
+    <form method="post" action="#">
+        {% csrf_token %}
+        {% for question in questions %}
+        <div class="card">
+            <h2>{{ question.question_text }}</h2>
+            <div class="grid"> 
+                {% for option in question.option_set.all %}
+                <div class="customCheckBoxHolder">
+                    <input type="checkbox" id="option_{{ option.id }}" name="option_{{ question.id }}" value="{{ option.id }}" class="customCheckBoxInput">
+                    <label for="option_{{ option.id }}" class="customCheckBoxWrapper">
+                        <div class="customCheckBox">
+                            <div class="inner">{{ option.option_text }}</div>
+                        </div>
+                    </label>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+        <button id="Finish" type="submit" name="Finish" value="Finish">Finish</button>
+    </form>
+</div>
+
 </body>
 </html>
