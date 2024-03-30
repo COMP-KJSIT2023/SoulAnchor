@@ -50,11 +50,11 @@ Home
 </section>
 <section id="info">
     <!-- HTML -->
-    <div id="surveyPrompt" class="modal">
+    <div id="surveyPrompt" class="modal" {% if not survey_filled.status %} style = "display: block" {% endif %}>
         <div class="modal-content">
             <span class="close">&times;</span>
             <p>We care about your well-being! Please take a moment to complete a short survey about your mood today.</p>
-            <button id="startSurveyBtn">Start Survey</button>
+            <form method="post" action="#">{% csrf_token %}<button id="startSurveyBtn" type="submit" name="startSurveyBtn" value="startSurveyBtn">Start Survey</button></form>
         </div>
     </div>
 
@@ -77,26 +77,12 @@ Home
 <script>
     window.onload = function() {
     var modal = document.getElementById("surveyPrompt");
-    var startSurveyBtn = document.getElementById("startSurveyBtn");
     var closeBtn = document.getElementsByClassName("close")[0];
-    var filledSurvey = localStorage.getItem("filledSurvey");
-
-    // Check if the survey has already been filled
-    if (!filledSurvey) {
-        // Show the modal if the survey has not been filled
-        modal.style.display = "block";
 
         // Close the modal when the user clicks on the close button
         closeBtn.onclick = function() {
             modal.style.display = "none";
         }
-
-        // Redirect to the survey page when the user clicks on the "Start Survey" button
-        startSurveyBtn.onclick = function() {
-            localStorage.setItem("filledSurvey", true);
-            window.location.href = "/form";
-        }
     }
-}
 </script>
 {% endblock %}
