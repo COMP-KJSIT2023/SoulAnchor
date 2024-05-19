@@ -24,5 +24,6 @@ class Option(models.Model):
 class Answer(models.Model):
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
     option = models.ForeignKey(Option, on_delete=models.CASCADE)
+    created_at = models.DateTimeField(default=timezone.now)
     def __str__(self):
         return f"{self.question.question_text} - {self.option.option_text}"
